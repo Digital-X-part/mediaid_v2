@@ -1,11 +1,9 @@
-import React from 'react';
 
-const MyComponent = () => {
+
+function Page() {
     return (
-        <div>
+        <div>Page</div>
+    )
+}
 
-        </div>
-    );
-};
-
-export default MyComponent;
+export default Page
