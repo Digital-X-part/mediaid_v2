@@ -1,5 +1,6 @@
 'use client'
 import { ToggleContext } from "@/provider/contextProvider";
+import { useSession } from 'next-auth/react';
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from 'next/navigation';
@@ -8,18 +9,20 @@ import { CiLocationOn } from "react-icons/Ci";
 import { BsCartPlus } from "react-icons/bs";
 import Login from "../login/login";
 import SearchBar from "../search/SearchBar";
-
 const MainNavbar = () => {
-    const { data, setData } = useContext(ToggleContext)
+    const { setData } = useContext(ToggleContext)
+    const { status } = useSession()
 
     const query = useSearchParams()
     const isOpen = query.get("signin")
 
     useEffect(() => {
-        if (isOpen === "user") {
+
+        if (isOpen === "user" && status === "unauthenticated") {
             window.login_modal_1.showModal()
         }
-    }, [isOpen])
+
+    }, [isOpen, status])
 
     return (
         <div className="flex pt-2 pb-4 items-end justify-between gap-4 bg-base-100 lg:px-10">

@@ -30,7 +30,10 @@ export async function POST(req) {
     );
   }
   try {
-    await productModel.create(input);
+    // Image Uploading
+
+    // Then added
+    await productModel.create({ ...input });
     return NextResponse.json(
       { success: true, message: "Product added successfully !" },
       { status: 201 }

@@ -8,6 +8,7 @@ const categorySchema = new Schema(
   { timestamps: true }
 );
 
-const categoriesModel = models.products || model("products", categorySchema);
+const categoriesModel =
+  models.categories || model("categories", categorySchema);
 
 export default categoriesModel;

@@ -1,4 +1,5 @@
 import { ContextProvider } from "@/provider/contextProvider";
+import ReduxProvider from "@/provider/reduxProvider";
 import { Inter } from "next/font/google";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,7 +19,9 @@ export default async function RootLayout({ children }) {
     <html lang="en" data-theme="light">
       <body className={inter.className}>
         <ContextProvider>
-          <SessionProvider>{children}</SessionProvider>
+          <ReduxProvider>
+            <SessionProvider>{children}</SessionProvider>
+          </ReduxProvider>
         </ContextProvider>
       </body>
     </html>

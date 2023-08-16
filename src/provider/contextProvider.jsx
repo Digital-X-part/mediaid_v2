@@ -11,7 +11,8 @@ export const ContextProvider = ({ children }) => {
         openCart: false,
         openSearchList: false,
         openLogin: false,
-        sidebarCollapse: true,
+        sidebarCollapse: false,
+        mobileSidebar: false
     })
     return (
         <ToggleContext.Provider value={{ data, setData }}>

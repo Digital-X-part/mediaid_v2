@@ -1,6 +1,6 @@
 import { fetcher } from "@/utils/api_config";
 
-export const useProduct = () => {
+export const useCartProduct = () => {
   const { data, isLoading, error } = useSWR("/", fetcher);
 
   return {

@@ -13,8 +13,25 @@ const productSchema = new Schema(
       required: true,
     },
     description: { type: String, required: true },
-    rating: { type: Number, required: true, default: 0 },
-    stock: { type: Number, required: true, default: 0 },
+    typeOfSelling: {
+      type: String,
+      enum: ["new", "flash", "feature", "popular", "push"],
+      default: "new",
+    },
+    rating: {
+      type: Number,
+      default: 0,
+      min: 0,
+      max: 5,
+    },
+    totalSales: { type: Number, default: 0 },
+    status: { type: String, enum: ["active", "inactive"], default: "inactive" },
+    sku: {
+      type: String,
+      required: true,
+    },
+    addedBy: { type: Schema.ObjectId, required: true, ref: "Admin" },
+    availableStock: { type: Number, required: true, default: 0 },
     discountPrice: { type: Number, required: true, default: 0 },
   },
   { timestamps: true }

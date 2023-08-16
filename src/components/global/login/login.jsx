@@ -20,7 +20,7 @@ const Login = () => {
                     Logout
                   </button>
                   : <button
-                    onClick={() => signIn("google",)}
+                    onClick={() => signIn("google", { callbackUrl: "/" })}
                     className="w-full py-1 outline-none border rounded text-sm md:text-base font-medium text-slate-500 flex items-center justify-center gap-2">
                     <Image
                       src="https://i.ibb.co/5x1KjyG/googleicon-removebg-preview.png"

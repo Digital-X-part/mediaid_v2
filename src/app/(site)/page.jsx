@@ -2,7 +2,6 @@ import BestSellingProducts from "@/components/pages/home/section/BestSellingProd
 import FlashSale from "@/components/pages/home/section/FlashSale";
 import PushProducts from "@/components/pages/home/section/PushProducts";
 import Slider from "@/components/pages/home/slider/Slider";
-import { fetcher } from "@/utils/api_config";
 
 export const metadata = {
     title: "Mediaid BD | Doctors Need",
@@ -11,7 +10,7 @@ export const metadata = {
 };
 
 const HomePage = async () => {
-    const fetchData = await fetcher("https://dummyjson.com/products")
+    // const fetchData = await fetcher("https://dummyjson.com/products")
 
     return (
         <div>
