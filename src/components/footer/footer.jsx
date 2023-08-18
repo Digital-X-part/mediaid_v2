@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
     FaFacebookSquare,
     FaInstagram,
@@ -102,14 +103,14 @@ const Footer = () => {
                     <h1 className="text-lg md:text-xl font-semibold uppercase mb-4">
                         Pay With
                     </h1>
-                    {/* <Image
-                        src={payWith}
-                        alt="paywith"
+                    <Image
+                        src='/assets/available_payment_method.png'
+                        alt="pay with"
                         width={440}
                         height={368}
                         priority={true}
                         className="w-full"
-                    /> */}
+                    />
                 </div>
             </div>
             <p className="text-center text-sm md:text-base text-white mt-8">

@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   experimental: {
-    esmExternals: "loose", // <-- add this
-    serverComponentsExternalPackages: ["mongoose"], // <-- and this
+    esmExternals: "loose",
+    serverComponentsExternalPackages: ["mongoose"],
+  },
+  webpack(config) {
+    config.experiments = { ...config.experiments, topLevelAwait: true };
+    return config;
   },
   images: {
-    domains: [
-      "i0.wp.com",
-      "previews.123rf.com",
-      "i.ibb.co",
-      "images.unsplash.com",
-    ],
+    domains: ["i0.wp.com", "i.ibb.co", "res.cloudinary.com"],
   },
 };
 

@@ -1,12 +1,13 @@
+import { discountCalculator } from "@/utils/generator";
 import { TbCurrencyTaka } from "react-icons/tb";
 
-const ProductInfo = () => {
+const ProductInfo = ({ item }) => {
+    const discountPrice = discountCalculator(item.price, item.discountPercent)
     return (
         <div>
-            <h1 className="font-medium text-gray-600">
-                VK EMPORIUM Doll House Tent Light Weight , Water and Fire Proof Doll
-                House Tent (Pink)
-            </h1>
+            <h2 className="font-medium text-gray-600">
+                {item.title}
+            </h2>
             <div className="flex gap-2 mt-1 items-center">
                 <p className="bg-green-600 w-fit px-1.5 text-white rounded-md ">4★</p>
                 <p className="text-gray-500">637 Ratings & 70 Reviews</p>
@@ -14,13 +15,25 @@ const ProductInfo = () => {
             <div className="flex items-center gap-2 mt-2">
                 <div className="flex items-center">
                     <TbCurrencyTaka size={24} />
-                    <p className="text-2xl font-bold">470</p>
+                    <p className="text-2xl font-bold">{discountPrice}</p>
                 </div>
                 <div className="flex items-center text-gray-400">
-                    <TbCurrencyTaka color="gray" />
-                    <del>1999</del>
+                    {discountPrice !== item.price ?
+                        <>
+                            <TbCurrencyTaka color="gray" />
+                            <del>{item.price}</del>
+                        </> : null
+                    }
                 </div>
-                <span className="text-green-500 font-medium">76% off</span>
+                {
+                    // Discount Percent
+                    discountPrice !== item.price ?
+                        <span className="text-green-500 font-medium">
+                            {item.discountPercent}%
+                        </span>
+                        :
+                        null
+                }
             </div>
         </div>
     );

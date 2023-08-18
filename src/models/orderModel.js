@@ -27,6 +27,9 @@ const orderSchema = new Schema(
     email: { type: String, required: true },
     totalQuantity: { type: Number, required: true },
     orderTime: { type: String, default: Date.now },
+    couponCode: { type: String, required: true },
+    couponDiscount: { type: number, default: 0 },
+    totalAmount: { type: number, default: 0 },
     shippingMethod: { type: String, required: true },
     shipTo: {
       type: addressSchema,
@@ -42,9 +45,9 @@ const orderSchema = new Schema(
     updatedAt: { type: Date, default: Date.now },
     trackingNumber: { type: String, required: true },
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 
-const Order = models?.Order || model("Order", orderSchema);
+const OrderModel = models?.Order || model("Order", orderSchema);
 
-export default Order;
+export default OrderModel;

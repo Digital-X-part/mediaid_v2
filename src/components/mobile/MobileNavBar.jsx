@@ -8,8 +8,8 @@ import { ToggleContext } from "@/provider/contextProvider";
 import { useContext } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import SearchBar from "../global/search/SearchBar";
-import MobileSidebar from "./mobileSidebar";
+import SearchBar from "../header/search/SearchBar";
+import MobileSidebar from "./MobileSidebar";
 
 const MobileNav = () => {
   const { data, setData } = useContext(ToggleContext)
@@ -22,7 +22,6 @@ const MobileNav = () => {
       <div className="flex justify-between items-center px-3 lg:px-0 pt-3 ">
         <div className="flex">
           <div className="flex flex-col">
-            {" "}
             <Link href="/">
               <span className="sr-only">Workflow</span>
               <Image

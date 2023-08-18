@@ -2,7 +2,14 @@
 import { createContext, useState } from "react"
 
 // create toggle context
-export const ToggleContext = createContext()
+export const ToggleContext = createContext({
+    //    darkMode: false,
+    openCart: false,
+    openSearchList: false,
+    openLogin: false,
+    sidebarCollapse: false,
+    mobileSidebar: false
+})
 
 // create context provider
 export const ContextProvider = ({ children }) => {

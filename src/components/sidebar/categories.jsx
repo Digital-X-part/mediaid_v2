@@ -17,12 +17,10 @@ const Categories = () => {
                 alt="categories"
                 width={25}
                 height={25} />
-              {
-                data.sidebarCollapse ? null :
-                  <h3 className={`text-sm `}>
-                    {item.name}
-                  </h3>
-              }
+
+              <h3 className={`text-sm transition-all origin-left ${data.sidebarCollapse ? "invisible scale-0" : "visible scale-100"}`}>
+                {item.name}
+              </h3>
             </li>
           )
         })

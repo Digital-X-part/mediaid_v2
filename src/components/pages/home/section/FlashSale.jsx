@@ -1,11 +1,10 @@
 "use client"
-import "swiper/css";
-import "swiper/css/pagination";
+import { products } from "@/constant/dummyData";
+
+import FlashSellingProduct from "@/components/product/flashSale/FlashSellingProduct";
 import { Swiper, SwiperSlide } from "swiper/react";
-import FlashSellingProduct from "../product/FlashSellingProduct";
 
 const FlashSale = () => {
-  const FlashSaleDisplayProduct = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
   return (
     <div className="px-1 my-8">
       <div className="flex items-end justify-between">
@@ -26,23 +25,21 @@ const FlashSale = () => {
       </div>
 
       <Swiper
-        // breakpoints={{
-        //   // when window width is >= 640px
-        //   200: {
-        //     slidesPerView: 2.5,
-        //   },
-        //   640: {
-        //     slidesPerView: 4,
-        //   },
-        //   // when window width is >= 768px
-        //   768: {
-        //     slidesPerView: 6,
-        //   },
-        // }}
-        slidesPerView={6}
-        spaceBetween={10}
-        className="mySwiper">
-        {FlashSaleDisplayProduct.map((item, i) => (
+        breakpoints={{
+          // when window width is >= 640px
+          200: {
+            slidesPerView: 2.5,
+          },
+          640: {
+            slidesPerView: 4,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 6,
+          },
+        }}
+        className="flash-sell">
+        {products.map((item, i) => (
           <SwiperSlide key={i}>
             <FlashSellingProduct item={item} />
           </SwiperSlide>

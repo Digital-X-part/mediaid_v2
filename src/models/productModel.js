@@ -32,7 +32,14 @@ const productSchema = new Schema(
     },
     addedBy: { type: Schema.ObjectId, required: true, ref: "Admin" },
     availableStock: { type: Number, required: true, default: 0 },
-    discountPrice: { type: Number, required: true, default: 0 },
+    tag: { type: Array, required: true },
+    discountPercent: {
+      type: Number,
+      required: true,
+      default: 0,
+      max: 100,
+      min: 0,
+    },
   },
   { timestamps: true }
 );

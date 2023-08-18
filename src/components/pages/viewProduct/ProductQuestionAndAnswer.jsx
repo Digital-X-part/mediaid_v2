@@ -1,9 +1,7 @@
 'use client'
 import { BiLike, BiSort } from "react-icons/bi";
-import { BsFillStarFill } from "react-icons/bs";
 import { FiFilter } from "react-icons/fi";
 import { GoShieldCheck } from "react-icons/go";
-import Rating from "react-rating";
 
 const ProductQuestionAndAnswer = () => {
   return (
@@ -31,14 +29,14 @@ const ProductQuestionAndAnswer = () => {
             <div className="flex items-start justify-between ">
               <div>
                 {/* Client Side render */}
-                <Rating
+                {/* <Rating
                   placeholderRating={2.5}
                   emptySymbol={<BsFillStarFill color="#EFF0F5" size={18} />}
                   placeholderSymbol={
                     <BsFillStarFill color="#FACA51" size={18} />
                   }
                   readonly
-                />
+                /> */}
                 <div className="flex items-center gap-2">
                   <p className="text-sm text-slate-400">
                     by

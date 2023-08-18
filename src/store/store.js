@@ -1,12 +1,8 @@
-import cartSlice from "@/slices/cartSlice";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import thunk from "redux-thunk";
+import { reducer } from "./reducer";
 import storage from "./storage";
-
-const reducer = combineReducers({
-  cartState: cartSlice,
-});
 
 const persistedReducer = persistReducer({ key: "root", storage }, reducer);
 

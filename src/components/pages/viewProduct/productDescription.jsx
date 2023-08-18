@@ -1,17 +1,16 @@
 
-import { Fragment } from "react";
 
-const ProductDescription = ({ product }) => {
+const ProductDescription = ({ item }) => {
     return (
         <>
             {/* highlight part */}
             <div className="border h-fit p-2 mt-3 md:p-5 mx-2 md:mx-0">
                 <p className="font-semibold text-sm md:text-base">Highlight:</p>
-                <ul className="list-disc pl-7 text-medium text-sm md:text-base">
+                {/* <ul className="list-disc pl-7 text-medium text-sm md:text-base">
                     {product?.highlights?.map((highlight, index) => (
                         <li key={index}>{highlight}</li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
 
             <div className="border  md:mx-auto mx-2 md:my-3  mb-4  px-6 py-4 ">
@@ -27,30 +26,29 @@ const ProductDescription = ({ product }) => {
                     <div>
                         <h3 className="font-bold mt-3 ">Specification :</h3>
                         <p className="text-base leading-4 mt-2 text-gray-600">
-                            Product Code: {product?.sku}
+                            SKU: {item.sku}
                         </p>
                         <p className="text-base leading-4 mt-2 text-gray-600">
-                            category: {product?.category}
+                            category: {item.category}
                         </p>
                         <p className="text-base leading-4 mt-2 text-gray-600">
-                            tags:{" "}
-                            {product?.tags?.map((tag, index) => (
+                            tags:
+                            {/* {item.tags.map((tag, index) => (
                                 <Fragment key={index}>
                                     <span className="text-sm py-px px-1 rounded bg-slate-300">
                                         {tag}
                                     </span>
                                     ,{" "}
                                 </Fragment>
-                            ))}
+                            ))} */}
                         </p>
                         <p className="text-base leading-4 mt-2 text-gray-600">
-                            Brand :{product?.brandName}
+                            Brand :{item.brandName}
                         </p>
                     </div>
                     <div className=" ">
                         <h3 className="font-bold mt-3 mb-2 ">Summary :</h3>
                         <p className=" text-base lg:leading-tight leading-normal text-gray-600 ">
-                            {product?.description}
                             Digital ECG Machine 1201 is AN cardiograph checking physiological
                             operate by recording activity wave shape of heart organic
                             phenomenon, it will give basic info for diagnosing and treatment

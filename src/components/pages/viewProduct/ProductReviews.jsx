@@ -1,6 +1,4 @@
 "use client"
-import { BsFillStarFill } from "react-icons/bs";
-import Rating from "react-rating";
 
 const ProductReviews = () => {
   return (
@@ -16,18 +14,18 @@ const ProductReviews = () => {
               4.3<span className="text-2xl text-gray-500">/5</span>
             </p>
             {/* Client Side render */}
-            <Rating
+            {/* <Rating
               className="mt-2"
               placeholderRating={4.3}
               emptySymbol={<BsFillStarFill color="#EFF0F5" size={25} />}
               placeholderSymbol={<BsFillStarFill color="#FACA51" size={25} />}
               readonly
-            />
+            /> */}
             <p className="text-gray-500">82 Ratings</p>
           </div>
           <div className="flex items-start gap-x-4 pr-10">
             <div className="flex flex-col-reverse ">
-              {[1, 2, 3, 4, 5].map((ratingItem) => (
+              {/* {[1, 2, 3, 4, 5].map((ratingItem) => (
                 // Client Side render
                 <Rating
                   key={ratingItem}
@@ -38,7 +36,7 @@ const ProductReviews = () => {
                   }
                   readonly
                 />
-              ))}
+              ))} */}
             </div>
             <div className="flex flex-col-reverse mt-1">
               {[2, 3, 0, 26, 51].map((ratingCountItem, index) => (

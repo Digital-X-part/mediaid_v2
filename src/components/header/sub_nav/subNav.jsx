@@ -3,8 +3,8 @@ import { BiPhoneCall } from "react-icons/bi";
 import { BsShopWindow } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { LiaFilePrescriptionSolid } from "react-icons/lia";
-import CategoryButton from "./button/categoryButton";
-const SubNav = ({ handleSidebarOpen }) => {
+import CategoryButton from "../button/categoryButton";
+const SubNav = () => {
     return (
         <div className="h-12 w-full -mt-2 grid grid-cols-12 border-y bg-slate-100 lg:px-3">
             <div className="col-start-1 col-end-3">

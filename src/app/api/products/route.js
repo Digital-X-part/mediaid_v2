@@ -1,7 +1,4 @@
-import productModel from "@/models/productModel";
 import { NextResponse } from "next/server";
-
-console.log("Ok");
 
 export async function GET(req) {
   try {
@@ -10,10 +7,12 @@ export async function GET(req) {
     return NextResponse.json(error);
   }
 }
+
+// Method Post
 export async function POST(req) {
   const input = await req.json();
 
-  //   Protected by admin / vendor
+  // Protected by admin / vendor
   if (
     !input.title ||
     !input.description ||
@@ -29,9 +28,8 @@ export async function POST(req) {
       { status: 400 }
     );
   }
-  try {
-    // Image Uploading
 
+  try {
     // Then added
     await productModel.create({ ...input });
     return NextResponse.json(

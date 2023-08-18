@@ -11,10 +11,10 @@ function MobileSidebar() {
         <>
             <label
                 onClick={() => setData(s => ({ ...s, mobileSidebar: !s.mobileSidebar }))}
-                className="fixed h-screen z-[59] top-0  w-full bg-black bg-opacity-20 lg:hidden"
+                className="fixed  h-screen z-[59] top-0  w-full bg-black bg-opacity-20 lg:hidden"
             ></label>
             {/* mobile sidebar */}
-            <div className="fixed h-screen z-[60] -top-1 left-0 w-fit bg-white duration-200 lg:hidden ">
+            <div className="fixed animate-popup origin-left h-screen z-[60] -top-1 left-0 w-fit bg-white duration-200 lg:hidden ">
                 <div className="w-full h-fit p-3 bg-slate-100">
                     <div className="px-3 py-1 rounded-xl flex items-center gap-3">
                         <BsPersonCircle className="text-slate-500" size="1.5em" />
