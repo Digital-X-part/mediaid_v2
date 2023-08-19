@@ -8,7 +8,6 @@ import LoginModal from "./login/loginModal";
 import SearchBar from "./search/SearchBar";
 const Header = () => {
 
-
     return (
         <div className="flex pt-2 pb-4 items-end justify-between gap-4 bg-base-100 lg:px-10">
             <div className="col-span-3 flex justify-center items-center ">

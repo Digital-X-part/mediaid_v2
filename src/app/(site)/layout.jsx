@@ -1,4 +1,3 @@
-'use client'
 import Header from "@/components/header/header"
 import SubNav from "@/components/header/sub_nav/subNav"
 import MobileNavBar from "@/components/mobile/MobileNavBar"
