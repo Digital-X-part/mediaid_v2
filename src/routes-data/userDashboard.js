@@ -17,8 +17,8 @@ const userDashboardRoutes = [
       },
       {
         icon: <IoMdBookmarks color="blue" size={22} />, //IoMdBookmarks
-        title: "Addresses",
-        href: "/addresses",
+        title: "Address",
+        href: "/address",
       },
       {
         icon: <BsFillBagHeartFill color="blue" size={22} />, // GiEternalLove
@@ -28,17 +28,18 @@ const userDashboardRoutes = [
   
       {
         icon: <AiFillStar color="blue" size={22} />,
-        title: "Start Points",
+        title: "Star Points",
         href: "/star-points",
       },
       {
         icon: <IoMdWallet color="blue" size={22} />,
         title: "Transactions",
-        href: "/your-transition",
+        href: "/my-transactions",
       },
       {
         icon: <BsPower color="blue" size={22} />, // FaComputer
         title: "Log Out",
+        href: "",
       },
       // Add more card data objects here
   ];
