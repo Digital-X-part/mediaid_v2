@@ -8,11 +8,13 @@ import { ToggleContext } from "@/provider/contextProvider";
 import { useContext } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import SearchBar from "../header/search/SearchBar";
+import { useSelector } from "react-redux";
+import SearchBar from "../../header/search/SearchBar";
 import MobileSidebar from "./MobileSidebar";
 
 const MobileNav = () => {
   const { data, setData } = useContext(ToggleContext)
+  const { cartItems } = useSelector(s => s.cartState)
 
   function toggleLoginModal() {
 
@@ -55,7 +57,7 @@ const MobileNav = () => {
             <button>
               <BiCartAdd className="text-slate-500" size="1.5em" />
               <span className=" absolute -top-2 -right-2 rounded-full  px-1  text-[10px] bg-indigo-500 text-slate-50">
-                1
+                {cartItems.length}
               </span>
             </button>
           </div>
