@@ -1,3 +1,5 @@
+import { BsFillBagHeartFill, BsPower } from "react-icons/bs";
+
 const { AiFillStar } = require("react-icons/ai");
 const { FaShoppingCart, FaUserAlt } = require("react-icons/fa");
 const { IoMdBookmarks, IoMdWallet } = require("react-icons/io");
@@ -19,7 +21,7 @@ const userDashboardRoutes = [
         href: "/addresses",
       },
       {
-        icon: <IoMdWallet color="blue" size={22} />, // GiEternalLove
+        icon: <BsFillBagHeartFill color="blue" size={22} />, // GiEternalLove
         title: "Wish list",
         href: "/wishlist",
       },
@@ -35,7 +37,7 @@ const userDashboardRoutes = [
         href: "/your-transition",
       },
       {
-        icon: <IoMdWallet color="blue" size={22} />, // FaComputer
+        icon: <BsPower color="blue" size={22} />, // FaComputer
         title: "Log Out",
       },
       // Add more card data objects here
