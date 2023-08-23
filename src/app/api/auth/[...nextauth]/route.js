@@ -1,11 +1,6 @@
-import {NextResponse} from "next/server";
+import { authOption } from "@/utils/authOption";
+import NextAuth from "next-auth";
 
+const handler = NextAuth(authOption);
 
-export function GET(req){
-    try {
-
-        return NextResponse.json({message:"Error"})
-    }catch (err){
-        return NextResponse.json({message:"Error"})
-    }
-}
+export { handler as GET, handler as POST };
