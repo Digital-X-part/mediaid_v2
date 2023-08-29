@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
     FaFacebookSquare,
     FaInstagram,
@@ -16,22 +17,22 @@ const Footer = () => {
                     </h1>
                     <ul className="text-sm md:text-base font-normal space-y-2">
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <a href="#" className="hover:text-gray-100 hover:underline">
                                 Career
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <a href="#" className="hover:text-gray-100 hover:underline">
                                 Privacy Policy
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <a href="#" className="hover:text-gray-100 hover:underline">
                                 Terms & Conditions
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <a href="#" className="hover:text-gray-100 hover:underline">
                                 Return & Refund Policy
                             </a>
                         </li>
@@ -43,24 +44,24 @@ const Footer = () => {
                     </h1>
                     <ul className="text-sm md:text-base font-normal space-y-2">
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <Link href="/" className="hover:text-gray-100 hover:underline">
                                 FAQ
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
-                                Shop
-                            </a>
+                            <Link href="/account" className="hover:text-gray-100 hover:underline">
+                                Account
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
+                            <Link href="/" className="hover:text-gray-100 hover:underline">
                                 Special Offers
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:text-gray-300">
-                                My Account
-                            </a>
+                            <Link href="/" className="hover:text-gray-100 hover:underline">
+                                Products
+                            </Link>
                         </li>
                     </ul>
                 </div>
