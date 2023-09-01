@@ -24,7 +24,8 @@ export async function POST(req) {
   const input = await req.json();
   try {
     // Check input data
-    if (!input.name || !input.image || !input.createdBy) {
+    // if (!input.name || !input.image || !input.createdBy) {
+    if (!input.name) {
       return NextResponse.json(
         { success: false, message: "Invalid credentials !" },
         { status: 400 }
